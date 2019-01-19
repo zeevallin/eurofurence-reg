@@ -1,0 +1,34 @@
+{
+    "keyword": "hotel-reg-keyword",
+    "registrants": [
+        {
+            "id": "100200",
+            "access_token": "8fb565e",
+            "arrival": "08/13/2019",
+            "departure": "08/19/2019",
+            "comment": "We will do a Deluxe room if possible.",
+            "room_type": "Standard Room",
+            "occupancy": 2,
+            "occupants": [
+                {
+                    "badge_id": "1",
+                    "name": "John D.",
+                    "address": "My Bed",
+                    "post_code": "12345",
+                    "town": "Closetothesea",
+                    "country": "Sweden",
+                    "email": "wish@i.knew"
+                },
+                {
+                    "badge_id": "2",
+                    "name": "Jane D.",
+                    "address": "Her Bed",
+                    "post_code": "12345",
+                    "town": "Closetogermany",
+                    "country": "Netherlands",
+                    "email": "wish@you.knew"
+                }
+            ]
+        }
+    ]
+}

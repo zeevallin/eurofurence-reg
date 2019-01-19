@@ -1,0 +1,31 @@
+Dear Sir or Madam!
+
+I would like to make the following reservation:
+
+Keyword:     {{ .Keyword }}
+My secret:   {{ .Registrant.AccessToken }}-{{ .Registrant.ID }}
+
+Room Type:   {{ .Registrant.RoomType }}
+Occupancy:   {{ .Registrant.Occupancy }}
+
+Arrival:     {{ .Registrant.Arrival }}
+Departure:   {{ .Registrant.Departure }}
+
+{{ range $idx, $o := .Registrant.Occupants }}
+Person #{{ $idx }}{{ if $idx = 0 }} and main contact:{{ end }}
+             {{ .Name }}
+             {{ .Address }}
+             {{ .PostCode }} {{ .Town }}
+             {{ .Country }}
+             {{ .Email }}
+             {{ .PhoneNumber }}
+
+{{ end }}
+{{ if .Registrant.Comment}}
+Additional comments:
+{{ .Registrant.Comment }}
+{{ end }}
+Thank You!
+
+Best regards,
+    {{ if $o := index .Registrant.Occupants 0 }}{{ $o.Name }}{{ end }}
